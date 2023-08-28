@@ -1,0 +1,21 @@
+{
+  "name": "hsync-wc",
+  "version": "0.1.0",
+  "description": "Webcontainer helpers for hsync",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack && BUILD_MODE=production webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "b64id": "^1.0.1",
+    "rawr": "^0.15.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
