@@ -13,7 +13,6 @@
 ```
 <script src="https://cdn.jsdelivr.net/npm/hsync-wc/dist/hsync-wc.min.js"></script>
 ```
-
 this gives you a global `hsyncWC` variable.
 
 ## Relaying your WebContainer's shell to telnet
