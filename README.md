@@ -49,7 +49,7 @@ telnet localhost 2323
 
 ## Relaying ANY other TCP/IP port
 
-Add the port you want to relay to hsync:
+Add the ports you want to relay from your app through hsync:
 
 ```javascript
 hsyncCon.addSocketRelay({ port: 9000 }); // any service
