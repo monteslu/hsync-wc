@@ -4,8 +4,17 @@
 
 ## Installation
 
+### npm
+
 `npm install hsync-wc`
 
+### or with a script tag
+
+```
+<script src="https://cdn.jsdelivr.net/npm/hsync-wc/dist/hsync-wc.min.js"></script>
+```
+
+this gives you a global `hsyncWC` variable.
 
 ## Relaying your WebContainer's shell to telnet
 
@@ -13,14 +22,14 @@ First import hsync and hsync-wc into your app:
 
 ```javascript
 import hsync from 'hsync/hsync-web';
-import createNet from 'hsync-wc';
+import hsyncWC from 'hsync-wc';
 ```
 
 Then establish an hsync reverse proxy connection:
 
 ```javascript
 const hsyncCon = await hsync.dynamicConnect();
-const net = await createNet(webcontainerInstance);
+const net = await hsyncWC.createNet(webcontainerInstance);
 hsyncCon.setNet(net)
 hsyncCon.addSocketRelay({ port: 2323 }); // shell port
 

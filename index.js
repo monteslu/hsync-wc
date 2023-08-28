@@ -3,7 +3,7 @@ import rawr from 'rawr';
 import b64Id from 'b64id';
 import files from './files.js';
 
-export default async function createNet(webcontainerInstance, shellPort = 2323, logOutput = false) {
+export async function createNet(webcontainerInstance, shellPort = 2323, logOutput = false) {
   
   const events = new EventEmitter();
   const listeners = {};
@@ -208,8 +208,13 @@ export default async function createNet(webcontainerInstance, shellPort = 2323, 
     Socket,
     createServer,
     events,
-    files,
   };
 };
+const hsyncWC = {
+  createNet,
+  files,
+};
 
-globalThis.hsCreateNet = createNet;
+export default hsyncWC;
+
+globalThis.hsyncWC = hsyncWC;
