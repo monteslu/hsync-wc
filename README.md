@@ -32,7 +32,7 @@ const net = await hsyncWC.createNet(webcontainerInstance);
 hsyncCon.setNet(net)
 hsyncCon.addSocketRelay({ port: 2323 }); // shell port
 
-console.log(con.webUrl); // something like: https://xxxxxx.hsync.tech
+console.log(hsyncCon.webUrl); // something like: https://xxxxxx.hsync.tech
 ```
 
 Then in a terminal, connect to that webUrl:

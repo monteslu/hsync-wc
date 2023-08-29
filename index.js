@@ -2,6 +2,7 @@ import { EventEmitter } from 'events';
 import rawr from 'rawr';
 import b64Id from 'b64id';
 import files from './files.js';
+import pack from './package.json';
 
 export async function createNet(webcontainerInstance, shellPort = 2323, logOutput = false) {
   
@@ -213,6 +214,7 @@ export async function createNet(webcontainerInstance, shellPort = 2323, logOutpu
 const hsyncWC = {
   createNet,
   files,
+  pack,
 };
 
 export default hsyncWC;
